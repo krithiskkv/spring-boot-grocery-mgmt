@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>List of All Students</title>
+    </head>
+    <body>
+    	<div th:switch="${students}">
+    		<h2 th:case="null">No students to show!</h2>
+        	<div th:case="*">
+	            <h2>Students</h2>
+	            <table>
+	                <thead>
+	                    <tr>
+							<th>ID</th>
+	                        <th>Name</th>
+	                        <th>Class and Section</th>
+	                        <th>Gender</th>
+	                        <th>Date of Birth</th>
+	                        <th>Date of Joining</th>
+	                        <th>Blood Group</th>
+	                    </tr>
+	                </thead>
+	                <tbody>
+		                <tr th:each="student : ${students}">
+							<td th:text="${student.studentId}"></td>
+		                    <td th:text="${student.studentName}"></td>
+		                    <td th:text="${student.studentClass + '-' + student.studentSection}"></td>
+		                    <td th:text="${student.gender}"></td>
+		                    <td th:text="${#dates.format(student.dateOfBirth, 'dd-MM-yyyy')}"></td>
+		                    <td th:text="${#dates.format(student.dateOfJoining, 'dd-MM-yyyy')}"></td>
+		                    <td th:text="${student.bloodGroup}"></td>
+		                </tr>
+	            	</tbody>
+	        	</table>
+    		</div> 
+    	</div>
+    	<a th:href="@{/students/enroll}">Enroll New Student</a>     
+    </body>
+</html>

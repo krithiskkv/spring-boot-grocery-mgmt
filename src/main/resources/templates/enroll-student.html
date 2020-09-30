@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>Enroll a Student</title>
+    </head>
+    <body>
+    	<h2>Enter Student's Details</h2>
+		<form action="#" th:action="@{/students/enroll}" th:object="${student}" method="post">
+		    
+		    <label for="studentName">Name</label>
+		    <input type="text" th:field="*{studentName}" id="studentName" placeholder="Full name (with initials)">
+		    <br/>
+		    
+		    <label for="gender">Gender</label>
+		    <input type="radio" th:field="*{gender}" value="M" /> Male
+		    <input type="radio" th:field="*{gender}" value="F" /> Female
+		    <br/>
+		    
+		    <label for="dateOfBirth">Date of Birth</label>
+		    <input type="date" th:field="*{dateOfBirth}" id="dateOfBirth"/>
+		    <br/>
+		    
+		    <label for="bloodGroup">Blood Group</label>
+		    <select th:field="*{bloodGroup}" id="bloodGroup">
+			    <option value="A+">A Positive</option>
+			    <option value="A-">A Negative</option>
+			    <option value="AB+">AB Positive</option>
+			    <option value="AB-">AB Negative</option>
+			    <option value="B+">B Positive</option>
+			    <option value="B-">B Negative</option>
+			    <option value="O+">O Positive</option>
+			    <option value="O-">O Negative</option>
+			</select>
+			<br/>
+		    
+		    <label for="dateOfJoining">Date of Joining</label>
+		    <input type="date" th:field="*{dateOfJoining}" id="dateOfJoining" th:value="${#dates.format(dateDebut, 'yyyy-MM-dd')}"/>
+		    <br/>
+		    
+		    <label for="studentClass">Class</label>
+		    <input type="text" th:field="*{studentClass}" id="studentClass" placeholder="Class">
+		    <br/>
+		    
+		    <label for="studentSection">Class</label>
+		    <select th:field="*{studentSection}" id="studentSection">
+			    <option value="A">A</option>
+			    <option value="B">B</option>
+			    <option value="C">C</option>
+			    <option value="D">D</option>
+			    <option value="E">E</option>
+			</select>
+			<br/>
+		    
+		    <input type="submit" value="Enroll">   
+		</form>
+	</body>
+</html>
