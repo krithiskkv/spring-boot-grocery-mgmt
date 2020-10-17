@@ -11,7 +11,7 @@ import java.util.List;
  * Created by administrator on 26/9/20.
  */
 @RestController
-@RequestMapping("/items")
+@RequestMapping("/groceryMgmt/items")
 public class ItemController {
 
     @Autowired

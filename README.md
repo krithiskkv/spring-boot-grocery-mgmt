@@ -1,7 +1,7 @@
-Boot School
-===========
+Grocery Management
+===================
 
-Boot School is a Spring Boot application, under development. This application serves as a hands-on development playground for learners as well as experienced people who want to brush-up their Spring framework knowledge.
+Grocery Management is a Spring Boot application, under development. This application serves as a hands-on development playground for learners as well as experienced people who want to brush-up their Spring framework knowledge.
 
 How to run?
 -----------
@@ -12,4 +12,4 @@ Run Maven install in your IDE or "mvn install" in command prompt from the locati
 
 Now, in your IDE, set Maven build goal to "spring-boot:run" and run it as Maven Build. Else, from command prompt, run "mvn spring-boot:run"
 
-Open a browser of your choice and hit "http://localhost:8080/students"
+Open a browser of your choice and hit "http://localhost:8080/groceryMgmt"

@@ -6,10 +6,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="boot-grocery" />
         <module name="boot-school" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="boot-grocery" target="1.8" />
       <module name="boot-school" target="1.8" />
     </bytecodeTargetLevel>
   </component>

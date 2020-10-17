@@ -1,5 +1,6 @@
 package org.krithika.grocery.repository;
 
+import org.krithika.grocery.entity.GroceryListItem;
 import org.krithika.grocery.entity.Item;
 import org.springframework.data.jpa.repository.JpaRepository;
 
@@ -15,8 +16,6 @@ public interface ItemRepository extends JpaRepository<Item, Long> {
     List<Item> findByInStock(boolean isInStock);
 
     Item findByName(String name);
-
-    Item findById(int id);
 
     List<Item> findByNameContainsIgnoreCase(String itemString);
 
