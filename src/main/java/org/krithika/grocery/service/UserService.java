@@ -23,8 +23,10 @@ public class UserService implements UserDetailsService {
 
     @Autowired
     private UserRepository userRepository;
+
     @Autowired
     private ItemRepository itemRepository;
+
     @Autowired
     private PasswordEncoder bCryptPasswordEncoder;
 
